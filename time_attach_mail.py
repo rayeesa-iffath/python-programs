@@ -8,9 +8,9 @@ from email.mime.base import MIMEBase
 from email import encoders
 
 # Gmail details
-sender_email = "rayeesaiffath@gmail.com"
-receiver_email = "rayeesaizhan@gmail.com"
-app_password = "bfnx mheb dbmd lbkq"
+sender_email = "aujryikthh@gmail.com"
+receiver_email = "adfghsjsfhjs@gmail.com"
+app_password = "your password"
 
 # Time to send mail (24-hour format)
 send_time = "15:00"
