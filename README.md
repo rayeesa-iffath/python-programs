@@ -383,17 +383,3 @@ The main purpose of this repository is:
 **Rayeesa Iffath**
 
 Student | Python Learner | Exploring Data Science & AI
-
----
-
-# Future Improvements
-
-* More NumPy programs
-* Advanced Pandas analysis
-* Machine Learning basics
-* Data science mini projects
-* GUI-based Python applications
-
----
-
-⭐ If you found this repository useful, support it by starring the repository on GitHub.
