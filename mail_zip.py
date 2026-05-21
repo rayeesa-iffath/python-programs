@@ -10,9 +10,9 @@ from email.mime.base import MIMEBase
 from email import encoders
 
 # Gmail details
-sender_email = "rayeesaiffath@gmail.com"
-receiver_email = "rayeesaizhan@gmail.com"
-app_password = "bfnx mheb dbmd lbkq"
+sender_email = "dfghbasdfh@gmail.com"
+receiver_email = "hwartadfghha@gmail.com"
+app_password = "your password"
 
 # Folder path
 folder_path = r"C:\Users\C2C\Desktop\vac prog"
