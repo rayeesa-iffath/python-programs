@@ -7,9 +7,9 @@ from email import encoders
 import os
 
 # Gmail details
-sender_email = "rayeesaiffath@gmail.com"
-receiver_email = "rayeesaizhan@gmail.com"
-app_password = "bfnx mheb dbmd lbkq"
+sender_email = "sdafgASDfc@gmail.com"
+receiver_email = "sdfGdsfgafh@gmail.com"
+app_password = "your password"
 
 # File path
 file_path = r"C:\Users\C2C\Downloads\vac.pdf"
