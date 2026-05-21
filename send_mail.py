@@ -4,9 +4,9 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 # Your Gmail details
-sender_email = "rayeesaiffath@gmail.com"
-receiver_email = "rayeesaizhan@gmail.com"
-app_password = "bfnx mheb dbmd lbkq"
+sender_email = "sedgsdfhgs@gmail.com"
+receiver_email = "etgwreetr@gmail.com"
+app_password = "your password"
 
 # Create message
 message = MIMEMultipart()
