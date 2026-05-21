@@ -1,0 +1,20 @@
+m1=float(input("enter java mark ="))
+m2=float(input("enter english mark"))
+m3=float(input("enter c mark"))
+m4=float(input("enter maths mark"))
+m5=float(input("enter python mark"))
+total =m1+m2+m3+m4+m5
+av=total/5
+print("the value of java mark is :",m1)
+print("the value of english mark is :",m2)
+print("the value of c mark is :",m3)
+print("the value of maths mark is :",m4)
+print("the value of python mark is :",m5)
+print("the total value is :",total)
+
+if(m1>=50 and m2>=50 and m3>=50 and m4>=50 and m5>=50):
+ print("PASS")
+ print("Average=",av)
+else:
+    print("Fail")
+

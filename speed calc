@@ -1,0 +1,6 @@
+speed = float(input("Enter speed value:"))
+time = float(input("Enter time value:"))
+distance = speed*time
+print("The speed spent is =",speed)
+print("The time taken is =",time)
+print("The distance covered is =",distance)

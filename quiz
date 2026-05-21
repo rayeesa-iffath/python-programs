@@ -1,0 +1,204 @@
+import json
+import random
+import os
+from datetime import datetime
+
+# =========================
+# PYTHON QUIZ TRACKER
+# =========================
+
+QUIZ_FILE = "leaderboard.json"
+
+questions = [
+    {
+        "question": "What is the correct file extension for Python files?",
+        "options": ["1. .pyth", "2. .pt", "3. .py", "4. .p"],
+        "answer": 3
+    },
+    {
+        "question": "Which keyword is used to define a function in Python?",
+        "options": ["1. function", "2. define", "3. def", "4. fun"],
+        "answer": 3
+    },
+    {
+        "question": "Which data type is immutable?",
+        "options": ["1. List", "2. Dictionary", "3. Set", "4. Tuple"],
+        "answer": 4
+    },
+    {
+        "question": "What does len() function do?",
+        "options": [
+            "1. Returns length of an object",
+            "2. Adds numbers",
+            "3. Converts to integer",
+            "4. Prints output"
+        ],
+        "answer": 1
+    },
+    {
+        "question": "Which loop is used to iterate over a sequence?",
+        "options": ["1. for loop", "2. while loop", "3. do-while", "4. repeat"],
+        "answer": 1
+    },
+    {
+        "question": "Which symbol is used for comments in Python?",
+        "options": ["1. //", "2. #", "3. /* */", "4. --"],
+        "answer": 2
+    },
+    {
+        "question": "What is the output of: print(type(10)) ?",
+        "options": [
+            "1. <class 'float'>",
+            "2. <class 'str'>",
+            "3. <class 'int'>",
+            "4. integer"
+        ],
+        "answer": 3
+    },
+    {
+        "question": "Which function is used to take user input?",
+        "options": ["1. get()", "2. input()", "3. read()", "4. scanf()"],
+        "answer": 2
+    },
+    {
+        "question": "Which operator is used for exponentiation?",
+        "options": ["1. ^", "2. **", "3. //", "4. %%"],
+        "answer": 2
+    },
+    {
+        "question": "Which collection type stores key-value pairs?",
+        "options": ["1. List", "2. Tuple", "3. Dictionary", "4. Set"],
+        "answer": 3
+    }
+]
+
+
+# =========================
+# LEADERBOARD FUNCTIONS
+# =========================
+
+def load_leaderboard():
+    if not os.path.exists(QUIZ_FILE):
+        return []
+
+    with open(QUIZ_FILE, "r") as file:
+        return json.load(file)
+
+
+def save_leaderboard(data):
+    with open(QUIZ_FILE, "w") as file:
+        json.dump(data, file, indent=4)
+
+
+def show_leaderboard():
+    leaderboard = load_leaderboard()
+
+    if not leaderboard:
+        print("\nNo leaderboard data found.\n")
+        return
+
+    print("\n========== LEADERBOARD ==========")
+
+    leaderboard = sorted(
+        leaderboard,
+        key=lambda x: x["score"],
+        reverse=True
+    )
+
+    for rank, player in enumerate(leaderboard, start=1):
+        print(
+            f"{rank}. {player['name']} | "
+            f"Score: {player['score']} | "
+            f"Date: {player['date']}"
+        )
+
+    print("=================================\n")
+
+
+# =========================
+# QUIZ FUNCTION
+# =========================
+
+def start_quiz():
+    print("\n===== PYTHON BASICS QUIZ =====\n")
+
+    name = input("Enter your name: ")
+
+    score = 0
+    random.shuffle(questions)
+
+    start_time = datetime.now()
+
+    for index, q in enumerate(questions, start=1):
+        print(f"\nQuestion {index}:")
+        print(q["question"])
+
+        for option in q["options"]:
+            print(option)
+
+        try:
+            answer = int(input("Enter option number: "))
+
+            if answer == q["answer"]:
+                print("Correct!")
+                score += 1
+            else:
+                print("Wrong!")
+
+        except ValueError:
+            print("Invalid input!")
+
+    end_time = datetime.now()
+
+    total_time = end_time - start_time
+
+    print("\n===== QUIZ COMPLETED =====")
+    print(f"Player: {name}")
+    print(f"Final Score: {score}/{len(questions)}")
+    print(f"Time Taken: {total_time}")
+    print("==========================")
+
+    leaderboard = load_leaderboard()
+
+    leaderboard.append({
+        "name": name,
+        "score": score,
+        "date": str(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+    })
+
+    save_leaderboard(leaderboard)
+
+
+# =========================
+# MAIN MENU
+# =========================
+
+def main():
+    while True:
+        print("\n====== QUIZ MENU ======")
+        print("1. Start Quiz")
+        print("2. View Leaderboard")
+        print("3. Exit")
+
+        choice = input("Choose an option: ")
+
+        if choice == "1":
+            start_quiz()
+
+        elif choice == "2":
+            show_leaderboard()
+
+        elif choice == "3":
+            print("Thank you for playing!")
+            break
+
+        else:
+            print("Invalid option. Try again.")
+
+
+# =========================
+# PROGRAM START
+# =========================
+
+if __name__ == "__main__":
+    main()

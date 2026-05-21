@@ -1,0 +1,6 @@
+n=input("enter the name:")
+rev=n[::-1]
+if(rev==n):
+ print("it is palindrom")
+else:
+     print("it is not palindrom")

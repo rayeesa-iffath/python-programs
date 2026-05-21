@@ -1,0 +1,50 @@
+import os
+import subprocess
+from datetime import datetime, timedelta
+
+# -----------------------------
+# SETTINGS
+# -----------------------------
+
+# Wake-up delay in minutes
+WAKE_AFTER_MINUTES = 1
+
+# Shutdown delay in seconds
+SHUTDOWN_AFTER_SECONDS = 30
+
+# -----------------------------
+# CALCULATE WAKE TIME
+# -----------------------------
+
+wake_time = datetime.now() + timedelta(minutes=WAKE_AFTER_MINUTES)
+wake_time_str = wake_time.strftime("%H:%M")
+
+task_name = "AutoWakeTask"
+
+# -----------------------------
+# CREATE WAKE TASK
+# -----------------------------
+
+create_task_cmd = f'''
+schtasks /create /tn "{task_name}" ^
+/tr "cmd /c exit" ^
+/sc once ^
+/st {wake_time_str} ^
+/ru SYSTEM ^
+/rl HIGHEST ^
+/f
+'''
+
+# Enable wake timer
+subprocess.run(create_task_cmd, shell=True)
+
+print(f"Wake task scheduled at {wake_time_str}")
+
+# -----------------------------
+# SHUTDOWN SYSTEM
+# -----------------------------
+
+shutdown_cmd = f"shutdown /s /t {SHUTDOWN_AFTER_SECONDS}"
+
+print(f"System will shutdown in {SHUTDOWN_AFTER_SECONDS} seconds...")
+os.system(shutdown_cmd)
