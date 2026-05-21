@@ -1,327 +1,347 @@
 # Python Programs Repository
 
-Welcome to my Python Programs repository!
-This repository contains beginner-friendly Python programs created for learning and practicing Python programming concepts. The programs include basic Python logic, NumPy operations, Pandas data analysis, and data visualization using Matplotlib.
+Welcome to my Python Programs Repository!
+This repository contains beginner-friendly Python programs created for learning, practice, and academic purposes. The programs cover various Python concepts such as loops, conditions, functions, arrays, NumPy, Pandas, Matplotlib, socket programming, and mini console-based applications.
 
-## Repository Link
+This repository is useful for:
 
-[Python Programs Repository](https://github.com/rayeesa-iffath/python-programs?utm_source=chatgpt.com)
+* Students learning Python
+* Beginners practicing coding
+* Understanding Python logic building
+* Academic lab programs and mini projects
+
+Repository: [Python Programs Repository](https://github.com/rayeesa-iffath/python-programs?utm_source=chatgpt.com)
 
 ---
 
-# Repository Overview
+# Programs Included
 
-This repository is organized with simple and easy-to-understand programs for students and beginners. Each program focuses on a specific concept and helps in understanding Python practically through examples.
+## 1. Armstrong Number Program
 
-The repository includes:
+### File Name:
 
-* Basic Python programs
-* NumPy programs
-* Pandas programs
-* Data visualization programs
-* CSV handling programs
+`armstrong.py`
+
+### Description:
+
+This program checks whether a given number is an Armstrong number or not.
+
+An Armstrong number is a number whose sum of cubes of its digits is equal to the original number.
+
+### Concepts Used:
+
+* While Loop
+* Modulus Operator
+* Integer Division
+* Conditional Statements
+
+### Example:
+
+Input:
+
+```python id="d6u7qp"
+153
+```
+
+Output:
+
+```python id="h8jz5v"
+The number is armstrong
+```
+
+### Learning Outcome:
+
+Understand digit extraction and mathematical logic building.
+
+---
+
+# 2. Attendance Tracker System
+
+### File Name:
+
+`attendance_tracker.py`
+
+### Description:
+
+This is a mini console-based attendance management system.
+
+The program allows users to:
+
+* Add student names
+* Mark attendance
+* Calculate attendance percentage
+* Display attendance reports
+
+### Features:
+
+* Student management
+* Present/Absent tracking
+* Attendance percentage calculation
+* Interactive menu system
+
+### Concepts Used:
+
+* Functions
+* Dictionaries
+* Loops
+* Conditional Statements
+* User Input Handling
+
+### Learning Outcome:
+
+Learn how real-world management systems work using Python.
+
+---
+
+# 3. Simple Calculator Program
+
+### File Name:
+
+`calculator.py`
+
+### Description:
+
+This program performs basic arithmetic operations based on user choice.
+
+### Operations Included:
+
+* Addition
+* Subtraction
+* Multiplication
+* Division
+
+### Concepts Used:
+
+* If-Elif Conditions
+* Arithmetic Operators
+* User Input
+
+### Example:
+
+```python id="0cf3a7"
+1.add
+2.sub
+3.mul
+4.div
+```
+
+### Learning Outcome:
+
+Understand menu-driven programming and arithmetic operations.
+
+---
+
+# 4. Socket Chat Client Program
+
+### File Name:
+
+`client.py`
+
+### Description:
+
+This program creates a simple client-side chat application using socket programming.
+
+The client connects to a server using an IP address and exchanges messages.
+
+### Features:
+
+* Server connection
+* Message sending
+* Message receiving
+* Exit using "bye"
+
+### Concepts Used:
+
+* Socket Programming
+* Networking Basics
+* TCP Communication
+* Infinite Loops
+
+### Learning Outcome:
+
+Learn the basics of networking and client-server communication.
 
 ---
 
 # NumPy Programs
 
-## 1. array_creation.py
+## 5. Array Creation Using NumPy
 
-### Program Name:
+### File Name:
 
-**Array Creation Using NumPy**
+`array_creation.py`
 
 ### Description:
 
-This program demonstrates how to create a NumPy array using the `array()` function.
+Creates and displays a NumPy array.
 
 ### Concepts Used:
 
-* NumPy library
-* Array creation
-* Storing multiple values efficiently
-
-### Output:
-
-Displays the created array.
-
-### Example:
-
-```python id="cydc5x"
-[10 20 30 40]
-```
-
-### Learning Outcome:
-
-Understand how NumPy arrays are created and printed.
+* NumPy Arrays
+* Array Initialization
 
 ---
 
-## 2. average_marks.py
+## 6. Average Marks Using NumPy
 
-### Program Name:
+### File Name:
 
-**Finding Average Marks Using NumPy**
+`average_marks.py`
 
 ### Description:
 
-This program calculates the average value of marks stored inside a NumPy array using the `mean()` function.
+Calculates average marks using NumPy’s `mean()` function.
 
 ### Concepts Used:
 
-* NumPy arrays
-* Statistical operations
-* Mean/Average calculation
-
-### Output:
-
-Displays the average mark.
-
-### Example:
-
-```python id="v10o5y"
-Average Mark: 83.75
-```
-
-### Learning Outcome:
-
-Learn how NumPy performs mathematical calculations efficiently.
+* Mean Calculation
+* Numerical Analysis
 
 ---
 
-## 3. max_min_values.py
+## 7. Maximum and Minimum Values
 
-### Program Name:
+### File Name:
 
-**Finding Maximum and Minimum Values Using NumPy**
+`max_min_values.py`
 
 ### Description:
 
-This program finds the highest and lowest values from an array using `max()` and `min()` functions.
+Finds the highest and lowest values from an array.
 
 ### Concepts Used:
 
-* Array traversal
-* Maximum value
-* Minimum value
-
-### Output:
-
-Displays maximum and minimum values.
-
-### Example:
-
-```python id="7k7k6u"
-Maximum: 90
-Minimum: 10
-```
-
-### Learning Outcome:
-
-Understand basic data analysis operations using NumPy.
+* max()
+* min()
 
 ---
 
-## 4. array_addition.py
+## 8. Array Addition
 
-### Program Name:
+### File Name:
 
-**Addition of Two Arrays Using NumPy**
+`array_addition.py`
 
 ### Description:
 
-This program performs element-wise addition of two NumPy arrays.
+Performs element-wise addition of two arrays.
 
 ### Concepts Used:
 
-* Array arithmetic
-* Element-wise operations
-
-### Output:
-
-Displays the result after adding both arrays.
-
-### Example:
-
-```python id="prlpk5"
-Addition: [5 7 9]
-```
-
-### Learning Outcome:
-
-Learn how mathematical operations are applied directly to arrays.
+* Array Arithmetic
+* Vector Operations
 
 ---
 
-## 5. reshape_matrix.py
+## 9. Reshape Matrix Program
 
-### Program Name:
+### File Name:
 
-**Reshaping Array into Matrix Using NumPy**
+`reshape_matrix.py`
 
 ### Description:
 
-This program converts a one-dimensional array into a two-dimensional matrix using `reshape()`.
+Converts a one-dimensional array into a matrix format.
 
 ### Concepts Used:
 
-* Matrix conversion
-* Reshaping arrays
-* 2D arrays
-
-### Output:
-
-Displays the matrix form.
-
-### Example:
-
-```python id="65nl7t"
-[[1 2 3]
- [4 5 6]]
-```
-
-### Learning Outcome:
-
-Understand how data can be transformed into matrix format.
+* reshape()
+* Matrix Representation
 
 ---
 
 # Pandas Programs
 
-## 1. student_dataframe.py
+## 10. Student DataFrame Program
 
-### Program Name:
+### File Name:
 
-**Creating a DataFrame Using Pandas**
+`student_dataframe.py`
 
 ### Description:
 
-This program creates a Pandas DataFrame using student names and marks.
+Creates a DataFrame containing student names and marks.
 
 ### Concepts Used:
 
 * Pandas DataFrame
-* Dictionary to DataFrame conversion
-* Tabular data handling
-
-### Output:
-
-Displays student details in table format.
-
-### Learning Outcome:
-
-Learn how Pandas organizes data into rows and columns.
+* Tabular Data Handling
 
 ---
 
-## 2. highest_mark.py
+## 11. Highest Mark Finder
 
-### Program Name:
+### File Name:
 
-**Finding Highest Mark Using Pandas**
+`highest_mark.py`
 
 ### Description:
 
-This program finds the highest mark from a DataFrame column using the `max()` function.
+Finds the maximum mark from the DataFrame.
 
 ### Concepts Used:
 
-* DataFrame column operations
-* Maximum value retrieval
-
-### Output:
-
-Displays the highest mark.
-
-### Example:
-
-```python id="50lxxd"
-Highest Mark:
-95
-```
-
-### Learning Outcome:
-
-Understand how to analyze numerical data in DataFrames.
+* Data Analysis
+* max() Function
 
 ---
 
-## 3. filter_high_marks.py
+## 12. Filter Students by Marks
 
-### Program Name:
+### File Name:
 
-**Filtering Students with Marks Greater Than 90**
+`filter_high_marks.py`
 
 ### Description:
 
-This program filters and displays students whose marks are greater than 90.
+Displays students who scored above 90 marks.
 
 ### Concepts Used:
 
-* Conditional filtering
-* DataFrame selection
-
-### Output:
-
-Displays filtered student records.
-
-### Learning Outcome:
-
-Learn how to filter rows based on conditions.
+* Conditional Filtering
+* Boolean Indexing
 
 ---
 
-## 4. read_csv_file.py
+## 13. CSV File Reader
 
-### Program Name:
+### File Name:
 
-**Reading CSV File Using Pandas**
+`read_csv_file.py`
 
 ### Description:
 
-This program reads data from a CSV file using the `read_csv()` function.
+Reads data from a CSV file using Pandas.
 
 ### Concepts Used:
 
-* CSV file handling
-* External data reading
-* File operations
-
-### Output:
-
-Displays CSV file contents.
-
-### Learning Outcome:
-
-Understand how real-world datasets are loaded into Python.
+* File Handling
+* CSV Reading
 
 ---
 
 # Matplotlib Program
 
-## 1. student_bar_chart.py
+## 14. Student Performance Bar Chart
 
-### Program Name:
+### File Name:
 
-**Student Performance Bar Chart Using Matplotlib**
+`student_bar_chart.py`
 
 ### Description:
 
-This program creates a bar chart representing student marks visually.
+Displays student marks visually using a bar chart.
+
+### Features:
+
+* X-axis labels
+* Y-axis labels
+* Chart title
 
 ### Concepts Used:
 
-* Data visualization
-* Bar chart plotting
-* Labels and titles
-
-### Output:
-
-Displays a graphical representation of student performance.
-
-### Learning Outcome:
-
-Learn the basics of plotting graphs using Matplotlib.
+* Data Visualization
+* Matplotlib Graphs
 
 ---
 
@@ -331,6 +351,7 @@ Learn the basics of plotting graphs using Matplotlib.
 * NumPy
 * Pandas
 * Matplotlib
+* Socket Programming
 
 ---
 
@@ -346,35 +367,58 @@ Download Python from:
 
 ## Step 2: Install Required Libraries
 
-```bash id="sot2gz"
+```bash id="9w7qyh"
 pip install numpy pandas matplotlib
 ```
 
 ---
 
-## Step 3: Run Any Program
+## Step 3: Run the Program
 
-```bash id="yhc1hk"
+```bash id="pv4rfe"
 python filename.py
 ```
 
 Example:
 
-```bash id="gy8ec3"
-python array_creation.py
+```bash id="stjlwm"
+python calculator.py
 ```
 
 ---
 
 # Purpose of This Repository
 
-The main purpose of this repository is:
+This repository was created for:
 
-* To practice Python programming
-* To understand data analysis libraries
-* To improve coding skills
-* To learn visualization techniques
-* To build beginner-friendly programming knowledge
+* Python practice
+* Academic lab work
+* Logic building
+* Learning data analysis
+* Understanding Python libraries
+* Beginner-friendly project development
+
+---
+
+# Skills Practiced
+
+* Problem Solving
+* Python Fundamentals
+* Data Analysis
+* Data Visualization
+* File Handling
+* Networking Basics
+* Console Application Development
+
+---
+
+# Future Improvements
+
+* More Python projects
+* GUI-based applications
+* Machine Learning programs
+* Database connectivity
+* Web development projects
 
 ---
 
@@ -382,4 +426,8 @@ The main purpose of this repository is:
 
 **Rayeesa Iffath**
 
-Student | Python Learner | Exploring Data Science & AI
+Python Learner | Exploring AI, Data Science & Software Development
+
+---
+
+⭐ If you found this repository useful, consider starring the repository on GitHub.
